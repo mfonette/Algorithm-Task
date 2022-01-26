@@ -1,0 +1,56 @@
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+ 
+
+Example 1:
+
+Input: s = "()"
+Output: true
+Example 2:
+
+Input: s = "()[]{}"
+Output: true
+Example 3:
+
+Input: s = "(]"
+Output: false
+ 
+"[[[]"
+"[({])}"
+Constraints:
+
+1 <= s.length <= 104
+s consists of parentheses only '()[]{}'.
+
+
+-convert the string into an aray of substrings by using split()
+-loop through the split array
+-get the first parenthesis and push it to an empty array created
+-loop through the array again and get the second parenthesis(i dont know how to get the next bracket whether it is by looping or not but i sha need to get the next one)
+-check if they match
+-if they match, return true
+-else isValid is false
+-it will run for all the items in the array
+
+then
+return isValid
+
+
+it contains 3 types of brackets, each bracket has a twin or its match, you can have an objext that maps this structure thast we talked about
+anything that is not an even number is going to fail i.e the length of the string/test given
+check if the length of openiong bracket is same length for closing bracket
+if you encounter an open bracket keep it an array,keep going to you encounter a closed bracket, check if it matches the last opened bracket
+
+-convert the string into an aray of substrings by using split()
+-loop through the split array
+-create an empty array for open brackets and another one for close bracket
+if string.length != even number return isValis false
+-get the first parenthesis and check 
+if it is an open array, push to open bracket
+-else if its a closed array, check the last array pushed in the closed bracket whether it fits
+-if it fits pop it out of the open bracket and continue checking
+-if it doesnt fit return isValid false
